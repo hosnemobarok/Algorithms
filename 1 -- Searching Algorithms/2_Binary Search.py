@@ -36,3 +36,46 @@ if __name__ == '__main__':
     t = int(input())
     res = Binary_Search(li, t)
     print(res)
+    
+    
+   
+'''
+# Python3 Program for recursive binary search.
+
+def binarySearch (arr, left, right, x):
+
+	if right >= left:
+
+		mid = left + (right - left) // 2
+
+	
+		if arr[mid] == x:
+			return mid
+
+		elif arr[mid] > x:
+			return binarySearch(arr, left, mid-1, x)
+
+		else:
+			return binarySearch(arr, mid + 1, right, x)
+
+	else:
+		
+		return -1
+
+# Driver Code
+if __name__ == '__main__':
+    
+	arr = [ 2, 3, 4, 10, 40 ]
+	x = 10
+	
+	left = 0
+	right = len(arr) - 1
+	
+	# Function call
+	result = binarySearch(arr, left, right, x)
+	
+	if result != -1:
+		print ("Element is present at index % d" % result)
+	else:
+		print ("Element is not present in array")
+'''
