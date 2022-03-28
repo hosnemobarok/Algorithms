@@ -1,18 +1,17 @@
 # Python program to Prime Factors
-def Prime_Factors(num):
-
-    for i in range(2, num+1):
-        while num % i == 0:
-            print(i, end=' ')
-            num //= i
-
-        if num == 1:
-            break
+def Prime_Factors(n):
+    c = 2
+    while n > 1:
+        if n % c == 0:
+            print(c, end=" ")
+            n //= c
+        else:
+            c += 1
 
 if __name__ == '__main__':
     for _ in range(int(input())):
-        num = int(input())
-        Prime_Factors(num)
+        n = int(input())
+        Prime_Factors(n)
 
 
 
