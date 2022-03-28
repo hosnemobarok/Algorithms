@@ -1,3 +1,8 @@
+"""
+    Time Complexity: This Approach is best for all composite numbers and achieves O(log n) but is O(n) otherwise.
+    Auxiliary Space: O(1)
+"""
+
 # Python program to Prime Factors
 def Prime_Factors(n):
     c = 2
@@ -12,25 +17,3 @@ if __name__ == '__main__':
     for _ in range(int(input())):
         n = int(input())
         Prime_Factors(n)
-
-
-
-"""
-from math import sqrt
-def primeFactors(n):
-    while n % 2 == 0:
-        print(2, end=' ')
-        n //= 2
-
-    for i in range(3, int(sqrt(n))+1, 2):
-        while n % i == 0:
-            print(i)
-            n //= i
-    # number greater then 2
-    if n > 2:
-        print(n)
-
-if __name__ == '__main__':
-    for _ in range(int(input())):
-        n = int(input())
-        res = primeFactors(n)"""
